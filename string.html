@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //string - count character
+        function countChar(s, ch) {
+  let count = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === ch) {
+      count++;
+    }
+  }
+   return count;
+}
+console.log(countChar("banana", "a")); 
+
+// with build in function
+function countChar(s, ch) {
+  return s.split(ch).length - 1;
+}
+
+console.log(countChar("banana", "a")); 
+
+//countVowel 
+function countVowels(s)
+{
+let count = 0;  
+for(let i = 0 ; i< s.length ; i++)
+{
+    const = ch = s[i];
+    if (ch === "a" || ch ==="e" || ch ==="i" || ch === "o" || ch=== "u" 
+        ch === "A" || ch ==="E" || ch ==="i" || ch === "o" || ch=== "U")
+         
+{
+    count++;
+}
+}
+return count;
+
+}
+console.log(countVowels("banana"));
+//Print all numbers from 1 to N.
+let n = 10;
+function printNumber(){
+
+    for( i = 0 ; i <=  10 ; i++ )
+{
+    console.log("i")
+}
+}
+
+
+
+// even number
+let n = 10;
+for (i = 0; i<= n ; i ++)
+{
+    if (i % 2 === 0)
+    
+    console.log(i);
+}
+
+
+// odd number 
+let n = 10;
+for (i = 0 ; i <= n ; i++)
+{
+    if( i % 2 ===1 )
+    console.log (i);
+}
+
+// display number from 1 to N
+
+let n = 100;
+for ( i = 0 ; i<= n ; i ++
+    {
+        console.log(i)
+    }
+)
+
+//even number
+let n = 10;
+for (let i = 0 ; i <= n ; i++)
+{
+ if ( i % 2 === 0)
+ console.log(i);
+}
+
+    </script>
+</body>
+</html>

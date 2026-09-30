@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Building Blocks",
+    "price": 499,
+    "category": "Educational Toy",
+    "description": "Colorful blocks that improve creativity and problem-solving."
+  },
+  {
+    "id": 2,
+    "name": "Toy Car",
+    "price": 299,
+    "category": "Vehicle Toy",
+    "description": "A fun and colorful toy car for kids."
+  },
+  {
+    "id": 3,
+    "name": "Teddy Bear",
+    "price": 699,
+    "category": "Soft Toy",
+    "description": "A soft and cuddly teddy bear for children."
+  },
+  {
+    "id": 4,
+    "name": "Toy Kitchen Set",
+    "price": 899,
+    "category": "Pretend Play",
+    "description": "A fun kitchen set for children to enjoy pretend cooking."
+  },
+  {
+    "id": 5,
+    "name": "Puzzle Game",
+    "price": 399,
+    "category": "Educational Toy",
+    "description": "A colorful puzzle game that helps children develop thinking skills."
+  }
+]

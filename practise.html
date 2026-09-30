@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// 1. Print all numbers from 1 to N
+function printUp(n) {
+    for (let i = 1; i <= n; i++) {
+        console.log(i);
+    }
+}
+
+// 2. Print all numbers from N down to 1
+function printDown(n) {
+    for (let i = n; i >= 1; i--) {
+        console.log(i);
+    }
+}
+
+// 3. Print all even numbers from 1 to N
+function printEven(n) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+}
+
+// 4. Print all odd numbers from 1 to N
+function printOdd(n) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 2 !== 0) {
+            console.log(i);
+        }
+    }
+}
+
+// 5. Find the sum of numbers from 1 to N
+function sumNumbers(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+    return sum;
+}
+
+// 6. Find the product of numbers from 1 to N
+function productNumbers(n) {
+    let product = 1;
+    for (let i = 1; i <= n; i++) {
+        product = product * i;
+    }
+    return product;
+}
+
+// 7. Count numbers from 1 to N divisible by 3
+function countDivisibleBy3(n) {
+    let count = 0;
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// 8. Print multiplication table
+function multiplicationTable(n) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(n + " x " + i + " = " + (n * i));
+    }
+}
+
+// 9. Print multiplication tables from 1 to N
+function multiplicationTables(n) {
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= 10; j++) {
+            console.log(i + " x " + j + " = " + (i * j));
+        }
+    }
+}
+
+// 10. Find largest of three numbers
+function largestOfThree(a, b, c) {
+    let largest = a;
+    if (b > largest) {
+        largest = b;
+    }
+    if (c > largest) {
+        largest = c;
+    }
+    return largest;
+}
+
+// 11. Find smallest of three numbers
+function smallestOfThree(a, b, c) {
+    let smallest = a;
+    if (b < smallest) {
+        smallest = b;
+    }
+    if (c < smallest) {
+        smallest = c;
+    }
+    return smallest;
+}
+
+// 12. Check positive, negative or zero
+function checkNumber(n) {
+    if (n > 0) {
+        return "positive";
+    } else if (n < 0) {
+        return "negative";
+    } else {
+        return "zero";
+    }
+}
+
+
+
+
+// 15. Find sum of digits
+function sumDigits(n) {
+    if (n < 0) {
+        n = -n;
+    }
+    let sum = 0;
+    while (n > 0) {
+        
+        sum = sum + digit;
+        n = Math.floor(n / 10);
+    }
+    return sum;
+}
+
+// 16. Reverse digits of a number
+function reverseNumber(n) {
+    let sign = 1;
+    if (n < 0) {
+        sign = -1;
+        n = -n;
+    }
+    let reversed = 0;
+    while (n > 0) {
+        let digit = n % 10;
+        reversed = reversed * 10 + digit;
+        n = Math.floor(n / 10);
+    }
+    return reversed * sign;
+}
+
+// 17. Check number palindrome
+function isPalindrome(n) {
+    let original = n;
+    if (n < 0) {
+        n = -n;
+        original = n;
+    }
+    let reversed = 0;
+    while (n > 0) {
+        let digit = n % 10;
+        reversed = reversed * 10 + digit;
+        n = Math.floor(n / 10);
+    }
+    if (original === reversed) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// 18. Find first digit
+function firstDigit(n) {
+    if (n < 0) {
+        n = -n;
+    }
+    while (n >= 10) {
+        n = Math.floor(n / 10);
+    }
+    return n;
+}
+
+// 19. Find last digit
+function lastDigit(n) {
+    if (n < 0) {
+        n = -n;
+    }
+    return n % 10;
+}
+
+// 20. Count how many times a digit appears
+function countDigit(n, target) {
+    if (n < 0) {
+        n = -n;
+    }
+    let count = 0;
+    if (n === 0 && target === 0) {
+        return 1;
+    }
+    while (n > 0) {
+        let digit = n % 10;
+
+        if (digit === target) {
+            count++;
+        }
+        n = Math.floor(n / 10);
+    }
+    return count;
+}
+
+// 21. Find largest digit
+function largestDigit(n) {
+    if (n < 0) {
+        n = -n;
+    }
+    let largest = 0;
+    while (n > 0) {
+        let digit = n % 10;
+        if (digit > largest) {
+            largest = digit;
+        }
+        n = Math.floor(n / 10);
+    }
+    return largest;
+}
+
+// 22. Find smallest digit
+function smallestDigit(n) {
+    if (n < 0) {
+        n = -n;
+    }
+    if (n === 0) {
+        return 0;
+    }
+    let smallest = 9;
+    while (n > 0) {
+        let digit = n % 10;
+        if (digit < smallest) {
+            smallest = digit;
+        }
+        n = Math.floor(n / 10);
+    }
+    return smallest;
+}
+
+// 23. Print numbers between A and B divisible by 3 and 5
+function divisibleByThreeAndFive(a, b) {
+    for (let i = a; i <= b; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log(i);
+        }
+    }
+}
+
+// 24. Print right triangle of stars
+function rightTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+
+        for (let j = 1; j <= i; j++) {
+            row = row + "*";
+        }
+        console.log(row);
+    }
+}
+
+// 25. Print inverted star triangle
+function invertedTriangle(n) {
+    for (let i = n; i >= 1; i--) {
+        let row = "";
+        for (let j = 1; j <= i; j++) {
+            row = row + "*";
+        }
+        console.log(row);
+    }
+}
+
+// 26. Print square pattern
+function squarePattern(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= n; j++) {
+            row = row + "*";
+        }
+        console.log(row);
+    }
+}
+
+// 27. Number triangle
+function numberTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= i; j++) {
+            row = row + j;
+        }
+        console.log(row);
+    }
+}
+
+// 28. Repeated number triangle
+function repeatedNumberTriangle(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= i; j++) {
+            row = row + i;
+        }
+        console.log(row);
+    }
+}
+
+// 29. Consecutive number triangle
+function consecutiveNumberTriangle(n) {
+    let number = 1;
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= i; j++) {
+            row = row + number + " ";
+            number++;
+        }
+        console.log(row);
+    }
+}
+
+// 30. Checkerboard pattern
+function checkerboard(n) {
+    for (let i = 0; i < n; i++) {
+        let row = "";
+        for (let j = 0; j < n; j++) {
+            if ((i + j) % 2 === 0) {
+                row = row + "*";
+            } else {
+                row = row + "-";
+            }
+        }
+        console.log(row);
+    }
+}
+
+// 31. Find string length without length
+function stringLength(str) {
+    let count = 0;
+    for (let i in str) {
+        count++;
+    }
+    return count;
+}
+
+// 32. Count vowels
+function countVowels(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        let ch = str[i];
+        if (
+            ch === "a" || ch === "e" || ch === "i" ||
+            ch === "o" || ch === "u" ||
+            ch === "A" || ch === "E" || ch === "I" ||
+            ch === "O" || ch === "U"
+        ) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// 33. Count consonants
+function countConsonants(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        let ch = str[i];
+        let isLetter =
+            (ch >= "a" && ch <= "z") ||
+            (ch >= "A" && ch <= "Z");
+            let isVowel =
+            ch === "a" || ch === "e" || ch === "i" ||
+            ch === "o" || ch === "u" ||
+            ch === "A" || ch === "E" || ch === "I" ||
+            ch === "O" || ch === "U";
+
+        if (isLetter && !isVowel) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// 34. Count spaces
+function countSpaces(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === " ") {
+            count++;
+        }
+    }
+    return count;
+}
+
+// 35. Reverse a string
+function reverseString(str) {
+    let result = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        result = result + str[i];
+    }
+    return result;
+}
+
+// 36. Check string palindrome
+function isStringPalindrome(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed = reversed + str[i];
+    }
+    if (str === reversed) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// 37. Find first occurrence of a character
+function firstOccurrence(str, target) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// 38. Count character occurrences
+function countCharacter(str, target) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === target) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// 39. Convert lowercase letters to uppercase manually
+function toUpperManual(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        let ch = str[i];
+        let code = ch.charCodeAt(0);
+        if (code >= 97 && code <= 122) {
+            result = result + String.fromCharCode(code - 32);
+        } else {
+            result = result + ch;
+        }
+    }
+    return result;
+}
+
+// 40. Remove spaces
+function removeSpaces(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== " ") {
+            result = result + str[i];
+        }
+    }
+    return result;
+}
+
+// 41. Find largest number in array
+function largestInArray(arr) {
+    let largest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+
+    return largest;
+}
+
+// 42. Find smallest number in array
+function smallestInArray(arr) {
+    let smallest = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+    return smallest;
+}
+
+// 43. Sum of array elements
+function sumArray(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+
+// 44. Average of array
+function averageArray(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    if (arr.length === 0) {
+        return 0;
+    }
+    return sum / arr.length;
+}
+
+// 45. Count even numbers in array
+function countEvens(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// 46. Count odd numbers in array
+function countOdds(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// 47. Reverse array without reverse()
+function reverseArray(arr) {
+    let result = [];
+    let index = 0;
+    for (let i = arr.length - 1; i >= 0; i--) {
+        result[index] = arr[i];
+        index++;
+    }
+    return result;
+}
+
+// 48. Copy array
+function copyArray(arr) {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        result[i] = arr[i];
+    }
+    return result;
+}
+
+// 49. Find first even number
+function firstEven(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            return arr[i];
+        }
+    }
+    return undefined;
+}
+
+// 50. Find first number greater than 100
+function firstGreaterThan100(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 100) {
+            return arr[i];
+        }
+    }
+    return undefined;
+}
+
+// 51. Check whether array contains target
+function containsValue(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// 52. Count target occurrences in array
+function countOccurrences(arr, target) {
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// 53. Elements at even indexes
+function evenIndexElements(arr) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr.length; i += 2) {
+        result[index] = arr[i];
+        index++;
+    }
+
+    return result;
+}
+
+// 54. Elements at odd indexes
+function oddIndexElements(arr) {
+    let result = [];
+    let index = 0;
+    for (let i = 1; i < arr.length; i += 2) {
+        result[index] = arr[i];
+        index++;
+    }
+    return result;
+}
+
+// 55. Swap first and last elements
+function swapFirstLast(arr) {
+    let result = copyArray(arr);
+    let temp = result[0];
+    result[0] = result[result.length - 1];
+    result[result.length - 1] = temp;
+    return result;
+}
+
+// 56. Merge two arrays
+function mergeArrays(arr1, arr2) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        result[index] = arr1[i];
+        index++;
+    }
+    for (let i = 0; i < arr2.length; i++) {
+        result[index] = arr2[i];
+        index++;
+    }
+    return result;
+}
+
+// 57. Remove negative numbers
+function removeNegatives(arr) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0) {
+            result[index] = arr[i];
+            index++;
+        }
+    }
+    return result;
+}
+
+// 58. Create array of squares
+function squaresArray(arr) {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        result[i] = arr[i] * arr[i];
+    }
+    return result;
+}
+
+// 59. Numbers greater than 50
+function greaterThan50(arr) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 50) {
+            result[index] = arr[i];
+            index++;
+        }
+    }
+    return result;
+}
+
+// 60. Create array containing strings and their lengths
+function stringLengths(arr) {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        result[i] = {
+            value: arr[i],
+            length: arr[i].length
+        };
+    }
+    return result;
+}
+
+// 61. Find second largest number
+function secondLargest(arr) {
+    let largest = arr[0];
+    let second = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            second = largest;
+            largest = arr[i];
+        } else if (arr[i] > second && arr[i] !== largest) {
+            second = arr[i];
+        }
+    }
+    return second;
+}
+
+// 62. Find second smallest number
+function secondSmallest(arr) {
+    let smallest = arr[0];
+    let second = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            second = smallest;
+            smallest = arr[i];
+        } else if (arr[i] < second && arr[i] !== smallest) {
+            second = arr[i];
+        }
+    }
+    return second;
+}
+
+// 63. Find smallest and largest in one loop
+function minMax(arr) {
+    let smallest = arr[0];
+    let largest = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+    return {
+        smallest: smallest,
+        largest: largest
+    };
+}
+
+// 64. Move zeroes to end
+function moveZeroes(arr) {
+    let result = [];
+    let index = 0;
+    let zeroCount = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            result[index] = arr[i];
+            index++;
+        } else {
+            zeroCount++;
+        }
+    }
+    for (let i = 0; i < zeroCount; i++) {
+        result[index] = 0;
+        index++;
+    }
+    return result;
+}
+
+// 65. Move negative numbers to beginning
+function moveNegatives(arr) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            result[index] = arr[i];
+            index++;
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0) {
+            result[index] = arr[i];
+            index++;
+        }
+    }
+    return result;
+}
+
+// 66. Separate even and odd numbers
+function separateEvenOdd(arr) {
+    let even = [];
+    let odd = [];
+    let evenIndex = 0;
+    let oddIndex = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            even[evenIndex] = arr[i];
+            evenIndex++;
+        } else {
+            odd[oddIndex] = arr[i];
+            oddIndex++;
+        }
+    }
+    return {
+        even: even,
+        odd: odd
+    };
+}
+
+// 67. Find duplicate values
+function findDuplicates(arr) {
+    let result = [];
+    let resultIndex = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let count = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                count++;
+            }
+        }
+        if (count > 1) {
+            let alreadyAdded = false;
+            for (let k = 0; k < result.length; k++) {
+                if (result[k] === arr[i]) {
+                    alreadyAdded = true;
+                }
+            }
+            if (!alreadyAdded) {
+                result[resultIndex] = arr[i];
+                resultIndex++;
+            }
+        }
+    }
+    return result;
+}
+
+// 68. Find values occurring exactly once
+function uniqueValues(arr) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let count = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                count++;
+            }
+        }
+        if (count === 1) {
+            result[index] = arr[i];
+            index++;
+        }
+    }
+    return result;
+}
+
+// 69. Build frequency object
+function frequencyObject(arr) {
+    let frequency = {};
+    for (let i = 0; i < arr.length; i++) {
+        let value = arr[i];
+        if (frequency[value] === undefined) {
+            frequency[value] = 1;
+        } else {
+            frequency[value]++;
+        }
+    }
+    return frequency;
+}
+
+// 70. Find most frequent number
+function mostFrequent(arr) {
+    let frequency = frequencyObject(arr);
+    let mostNumber = arr[0];
+    let mostCount = frequency[arr[0]];
+    for (let key in frequency) {
+        if (frequency[key] > mostCount) {
+            mostCount = frequency[key];
+            mostNumber = Number(key);
+        }
+    }
+    return mostNumber;
+}
+
+// 71. Find least frequent number
+function leastFrequent(arr) {
+    let frequency = frequencyObject(arr);
+    let leastNumber = arr[0];
+    let leastCount = frequency[arr[0]];
+
+    for (let key in frequency) {
+        if (frequency[key] < leastCount) {
+            leastCount = frequency[key];
+            leastNumber = Number(key);
+        }
+    }
+    return leastNumber;
+}
+
+// 72. Remove duplicates
+function removeDuplicates(arr) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let found = false;
+
+        for (let j = 0; j < result.length; j++) {
+            if (result[j] === arr[i]) {
+                found = true;
+            }
+        }if (!found) {
+            result[index] = arr[i];
+            index++;
+        }
+    }
+    return result;
+}
+
+// 73. Check same values in same order
+function sameOrder(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// 74. Check same values regardless of order
+function sameValues(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+    let frequency1 = frequencyObject(arr1);
+    let frequency2 = frequencyObject(arr2);
+     for (let key in frequency1) {
+        if (frequency1[key] !== frequency2[key]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// 75. Find common elements
+function commonElements(arr1, arr2) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        let found = false;
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                found = true;
+            }
+        }
+        let alreadyAdded = false;
+
+        for (let k = 0; k < result.length; k++) {
+            if (result[k] === arr1[i]) {
+                alreadyAdded = true;
+            }
+        }
+        if (found && !alreadyAdded) {
+            result[index] = arr1[i];
+            index++;
+        }
+    }
+    return result;
+}
+
+// 76. Values in first array but not second
+function differenceArray(arr1, arr2) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        let found = false;
+
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                found = true;
+            }
+        }
+        if (!found) {
+            result[index] = arr1[i];
+            index++;
+        }
+    }
+    return result;
+}
+
+// 77. Intersection of three arrays
+function intersectionThree(arr1, arr2, arr3) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        let foundInTwo = false;
+        let foundInThree = false;
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                foundInTwo = true;
+            }
+        }
+        for (let j = 0; j < arr3.length; j++) {
+            if (arr1[i] === arr3[j]) {
+                foundInThree = true;
+            }
+        }
+        let alreadyAdded = false;
+
+        for (let k = 0; k < result.length; k++) {
+            if (result[k] === arr1[i]) {
+                alreadyAdded = true;
+            }
+        }
+        if (foundInTwo && foundInThree && !alreadyAdded) {
+            result[index] = arr1[i];
+            index++;
+        }
+    }
+     return result;
+}
+
+// 78. Union of two arrays
+function unionArrays(arr1, arr2) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        let found = false;
+
+        for (let j = 0; j < result.length; j++) {
+            if (result[j] === arr1[i]) {
+                found = true;
+            }
+        }
+         if (!found) {
+            result[index] = arr1[i];
+            index++;
+        }
+    }for (let i = 0; i < arr2.length; i++) {
+        let found = false;
+
+        for (let j = 0; j < result.length; j++) {
+            if (result[j] === arr2[i]) {
+                found = true;
+            }
+        }
+        if (!found) {
+            result[index] = arr2[i];
+            index++;
+        }
+    }
+    return result;
+}
+
+// 79. Rotate array left by one
+function rotateLeftOne(arr) {
+    let result = [];
+    if (arr.length === 0) {
+        return result;
+    }
+    for (let i = 1; i < arr.length; i++) {
+        result[i - 1] = arr[i];
+    }
+    result[arr.length - 1] = arr[0];
+    return result;
+}
+
+// 80. Rotate array right by one
+function rotateRightOne(arr) {
+    let result = [];
+    if (arr.length === 0) {
+        return result;
+    }
+    result[0] = arr[arr.length - 1];
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        result[i + 1] = arr[i];
+    }
+    return result;
+}
+
+// 81. Rotate array left by K positions
+function rotateLeftK(arr, k) {
+    let result = [];
+    if (arr.length === 0) {
+        return result;
+    }
+    k = k % arr.length;
+    let index = 0;
+    for (let i = k; i < arr.length; i++) {
+        result[index] = arr[i];
+        index++;
+    }
+    for (let i = 0; i < k; i++) {
+        result[index] = arr[i];
+        index++;
+    }
+    return result;
+}
+
+// 82. Split array into chunks
+function chunkArray(arr, k) {
+    let result = [];
+    let resultIndex = 0;
+
+    for (let i = 0; i < arr.length; i = i + k) {
+        let chunk = [];
+        let chunkIndex = 0;
+
+        for (let j = i; j < i + k && j < arr.length; j++)
+         {
+            chunk[chunkIndex] = arr[j];
+            chunkIndex++;
+        }
+        result[resultIndex] = chunk;
+        resultIndex++;
+    }
+    return result;
+}
+
+// 83. Find pair whose sum equals target
+function findPairWithSum(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === target) {
+                return [arr[i], arr[j]];
+            }
+        }
+    }
+
+    return null;
+}
+
+// 84. Find all unique pairs whose sum equals target
+function allPairsWithSum(arr, target) {
+    let result = [];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === target) {
+                result[index] = [arr[i], arr[j]];
+                index++;
+            }
+        }
+    }
+    return result;
+}
+
+// 85. Pair with smallest absolute difference
+function smallestDifferencePair(arr) {
+    let bestPair = null;
+    let smallestDifference = Infinity;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            let difference = arr[i] - arr[j];
+            if (difference < 0) {
+                difference = -difference;
+            }
+            if (difference < smallestDifference) {
+                smallestDifference = difference;
+                bestPair = [arr[i], arr[j]];
+            }
+        }
+    }
+    return bestPair;
+}
+
+// 86. Find three numbers whose sum equals target
+function threeSum(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            for (let k = j + 1; k < arr.length; k++) {
+                if (arr[i] + arr[j] + arr[k] === target) {
+                    return [arr[i], arr[j], arr[k]];
+                }
+            }
+        }
+    }
+    return null;
+}
+
+// 87. Maximum product of any two numbers
+function maxProductTwo(arr) {
+    let largest = arr[0] * arr[1];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            let product = arr[i] * arr[j];
+            if (product > largest) {
+                largest = product;
+            }
+        }
+    }
+    return largest;
+}
+
+// 88. Maximum product of any three numbers
+function maxProductThree(arr) {
+    let largest = arr[0] * arr[1] * arr[2];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            for (let k = j + 1; k < arr.length; k++) {
+                let product = arr[i] * arr[j] * arr[k];
+                if (product > largest) {
+                    largest = product;
+                }
+            }
+        }
+    }
+
+    return largest;
+}
+
+// 89. Find missing number from 1 to N
+function missingNumber(arr, n) {
+    let expectedSum = 0;
+    let actualSum = 0;
+    for (let i = 1; i <= n; i++) {
+        expectedSum = expectedSum + i;
+    }
+    for (let i = 0; i < arr.length; i++) {
+        actualSum = actualSum + arr[i];
+    }
+    return expectedSum - actualSum;
+}
+
+// 90. Find first repeated value
+function firstRepeated(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < i; j++) {
+            if (arr[i] === arr[j]) {
+                return arr[i];
+            }
+        }
+    }
+    return undefined;
+}
+
+// 91. Find first non-repeated value
+function firstNonRepeated(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        let count = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                count++;
+            }
+        }
+        if (count === 1) {
+            return arr[i];
+        }
+    }
+    return undefined;
+}
+
+// 92. Find longest consecutive run
+function longestRun(arr) {
+    if (arr.length === 0) {
+        return {
+            value: undefined,
+            length: 0
+        };
+    }
+    let currentValue = arr[0];
+    let currentLength = 1;
+    let bestValue = arr[0];
+    let bestLength = 1;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] === currentValue) {
+            currentLength++;
+        } else {
+            currentValue = arr[i];
+            currentLength = 1;
+        }
+        if (currentLength > bestLength) {
+            bestLength = currentLength;
+            bestValue = currentValue;
+        }
+    }
+    return {
+        value: bestValue,
+        length: bestLength
+    };
+}
+
+// 93. Find longest increasing contiguous segment
+function longestIncreasing(arr) {
+    if (arr.length === 0) {
+        return 0;
+    }
+    let current = 1;
+    let longest = 1;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[i - 1]) {
+            current++;
+        } else {
+            current = 1;
+        }
+
+        if (current > longest) {
+            longest = current;
+        }
+    }
+    return longest;
+}
+
+// 94. Find longest decreasing contiguous segment
+function longestDecreasing(arr) {
+    if (arr.length === 0) {
+        return 0;
+    }
+    let current = 1;
+    let longest = 1;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < arr[i - 1]) {
+            current++;
+        } else {
+            current = 1;
+        }
+        if (current > longest) {
+            longest = current;
+        }
+        return longest;
+}
+
+// 95. Merge two sorted arrays
+function mergeSortedArrays(arr1, arr2) {
+    let result = [];
+    let i = 0;
+    let j = 0;
+    let index = 0;
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] <= arr2[j]) {
+            result[index] = arr1[i];
+            i++;
+        } else {
+            result[index] = arr2[j];
+            j++;
+        }
+        index++;
+    }
+    while (i < arr1.length) {
+        result[index] = arr1[i];
+        i++;
+        index++;
+    }
+    while (j < arr2.length) {
+        result[index] = arr2[j];
+        j++;
+        index++;
+    }
+    return result;
+}
+
+// 96. Find median without built-in sorting
+function median(arr) {
+    let sorted = insertionSort(arr);
+    let middle = Math.floor(sorted.length / 2);
+    if (sorted.length % 2 !== 0) {
+        return sorted[middle];
+    } else {
+        return (sorted[middle - 1] + sorted[middle]) / 2;
+    }
+}
+
+// 97. Bubble sort
+function bubbleSort(arr) {
+    let result = copyArray(arr);
+    for (let i = 0; i < result.length - 1; i++) {
+        for (let j = 0; j < result.length - 1 - i; j++) {
+             if (result[j] > result[j + 1]) {
+                let temp = result[j];
+                result[j] = result[j + 1];
+                result[j + 1] = temp;
+            }
+        }
+    }
+     return result;
+}
+
+// 98. Selection sort
+function selectionSort(arr) {
+    let result = copyArray(arr);
+     for (let i = 0; i < result.length; i++) {
+        let smallestIndex = i;
+        for (let j = i + 1; j < result.length; j++) {
+            if (result[j] < result[smallestIndex]) {
+                smallestIndex = j;
+            }
+        }
+        let temp = result[i];
+        result[i] = result[smallestIndex];
+        result[smallestIndex] = temp;
+    }
+    return result;
+}
+
+// 99. Insertion sort
+function insertionSort(arr) {
+    let result = copyArray(arr);
+    for (let i = 1; i < result.length; i++) {
+        let current = result[i];
+        let j = i - 1;
+
+        while (j >= 0 && result[j] > current) {
+            result[j + 1] = result[j];
+            j--;
+        }
+        result[j + 1] = current;
+    }
+    return result;
+}
+
+// 100. Find position where target should be inserted
+function insertPosition(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= target) {
+            return i;
+        }
+    }
+    return arr.length;
+}
+
+// 101. Count words without split()
+function countWords(sentence) {
+    let count = 0;
+    let insideWord = false;
+    for (let i = 0; i < sentence.length; i++) {
+        if (sentence[i] !== " ") {
+            if (insideWord === false) {
+                count++;
+                insideWord = true;
+            }
+        } else {
+            insideWord = false;
+        }
+    }
+    return count;
+}
+
+
+// 102. Find the longest word in a sentence.
+
+let sentance = "i love javascript programming"; 
+
+let currentWord = "";
+let longestWord = "";
+let longestLength = 0;
+
+for (let i = 0; i < sentance.length; i++) {
+    let char = sentance[i];
+    if (char === " ") {
+    } else {
+
+    }
+}
+
+console.log(longestWord); 
+
+ 
+//103. Find the shortest word in a sentence.
+let sentance = "I love javascript Programming";
+
+let currentWord =  "";
+let shortestWord = "";
+let shortestLength = 0;
+
+for( let i = 0; i <= sentance.length;i--)
+{
+    let char = sentance[i];
+    if(char === " ")
+{
+
+}else{
+
+}
+}
+console.log(shortestword);
+
+
+
+
+    </script>
+</body>
+</html>

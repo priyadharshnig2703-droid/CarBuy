@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1
+        let numbers = [10, 25, 30, 45, 50, 65, 70]
+        let sum =0;
+        let count=0;
+        for (i=0;i<numbers.length;i++)
+    {
+        console.log(numbers[i]);
+        sum= sum + numbers[i];
+        if( numbers[i]>40)
+    {
+        count++;
+    }
+    }
+    console.log(sum);
+    console.log(count);
+
+//2
+let marks = [85, 42, 67, 91, 35, 78, 55]; 
+marks.forEach((number)=>{ console.log(number);
+     if (number>=40) 
+     { 
+        console.log("Pass"); 
+    } 
+    else 
+    { 
+        console.log("Fail"); 
+    } 
+});
+
+//3
+let prices = [500, 1000, 1500, 2000, 2500];
+let discountPrice = prices.map((price) => {
+   let discount = price * 10/100;
+return price-discount;
+});
+console.log(discountPrice);
+let anotherPrice = discountPrice.map((price) =>{
+return price;
+});
+console.log(anotherPrice);
+
+//4
+
+let students = [
+    { name: "Arun", age: 17, mark: 75 },
+    { name: "Rahul", age: 21, mark: 65 },
+    { name: "John", age: 19, mark: 35 },
+    { name: "David", age: 23, mark: 82 },
+    { name: "Sam", age: 16, mark: 90 }
+];
+let filtereligible = students.filter((student) => {
+    return student.age >= 18 && student.mark >= 40;
+});
+console.log(filtereligible);
+
+
+//5
+const products = [
+    { id: 101, name: "Laptop", price: 60000 },
+    { id: 102, name: "Mouse", price: 1200 },
+    { id: 103, name: "Keyboard", price: 2500 },
+    { id: 104, name: "Monitor", price: 15000 }
+];
+let result  = products.find((product)=>{ return product.id === 103;
+});
+       console.log(result.name);
+       console.log(result.price);
+       
+//6
+let marks = [78, 85, 92, 35, 67, 88];
+let failed = marks.some((mark) => {
+    return mark <= 35;
+});
+let above90 = marks.some((mark) => {
+    return mark > 90;
+});
+
+console.log(failed);
+console.log(above90);
+
+
+//7
+let ages = [21, 25, 30, 19, 28, 22];
+let adults = ages.every((age) => {
+    return age >= 18;
+});
+let below40 = ages.every((age) => {
+    return age < 40;
+});
+
+console.log(adults);
+console.log(below40);
+
+//8
+let cart = [
+    { name: "Laptop", price: 50000, quantity: 1 },
+    { name: "Mouse", price: 1000, quantity: 2 },
+    { name: "Keyboard", price: 2500, quantity: 1 },
+    { name: "Monitor", price: 15000, quantity: 2 }
+];
+let final = cart.reduce((sum, item) => {
+    return sum + (item.price * item.quantity);
+}, 0);
+
+console.log(final);
+
+//9
+let numbers = [10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+//filter
+let evennumbers = numbers.filter((number) => {
+    return number % 2 === 0;
+});
+console.log(evennumbers);
+
+
+//map()
+let multiple = numbers.map((number) => {
+    return number * 2;
+});
+
+console.log(multiple);
+
+
+// reduce()
+const total = numbers.reduce((acc, current) => {
+    return acc + cuurent;
+}, 0);
+
+console.log(total);
+
+
+// some()
+const above80 = numbers.some((number) => {
+    return number > 80;
+});
+
+console.log(above80);
+
+
+// every()
+const alleven = numbers.every((number) => {
+    return number % 2 === 0;
+});
+
+console.log(alleven);
+
+//10
+const employees = [
+    { name: "Arun", department: "IT", salary: 50000, experience: 3 },
+    { name: "Rahul", department: "HR", salary: 40000, experience: 2 },
+    { name: "Priya", department: "IT", salary: 70000, experience: 5 },
+    { name: "John", department: "Sales", salary: 45000, experience: 4 },
+    { name: "Meena", department: "IT", salary: 60000, experience: 6 }
+];
+
+//filter() 
+let itemployee = employees.filter((employee) => {
+    return employee.department === "IT";
+});
+
+console.log(itemployee);
+
+
+// map()
+let employeenames = employees.map((employee) => {
+    return employee.name;
+});
+
+console.log(employeenames);
+
+
+// find()
+let experiencedemployee = employees.find((employee) => {
+    return employee.experience === 6;
+});
+
+console.log(experiencedemployee);
+
+
+// 4. some() 
+const moresalary = employees.some((employee) => {
+    return employee.salary > 80000;
+});
+
+console.log(moresalary);
+
+
+// 5. every()
+const minexperience = employees.every((employee) => {
+    return employee.experience >= 2;
+});
+
+console.log(minexperience);
+
+
+// 6. reduce()
+const totalsalary = employees.reduce((sum, employee) => {
+    return sum + employee.salary;
+}, 0);
+
+console.log(totalsalary);
+
+
+// 7. forEach()
+employees.forEach((employee) => {
+    console.log(employee.name)
+    console.log(employee.department)
+});
+
+
+    </script>
+
+
+    
+</body>
+</html>

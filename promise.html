@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//promise syntax
+//const promise = new Promise( (resolve,reject)=>{})
+
+
+//promise introduction this is the basic usage
+
+const promise = new Promise( (resolve,reject)=>{
+    let success = false
+    if(success)
+{
+    resolve("Data Loaded")
+}else{
+    reject("Data Loader Failed")
+}
+})
+
+//using.then() ------> this is used to call the result it is like executing
+promise.then ((result)=>{
+    console.log(result)
+})
+
+
+//using. catch() ------> this is used to get the error 
+promise.then ((result)=>{
+    console.log(result)
+})
+.catch((error)=>{
+    console.log(error)
+})
+
+//finally 
+.finally(() =>{
+    console.log(completed)
+})
+
+//let see how promise work in real time
+
+function DownloadFile(){ // function is assigned
+    return new Promise((resolve,reject)=>{ //syntax for promise
+        setTimeout(()=>{
+            resolve("File Downloaded!")
+        },3000)
+    })
+}
+DownloadFile()
+.then((data)=>{
+    console.log(data)
+})
+
+
+//lets see one example 
+function DownloadFile(){
+    return new Promise((resolve,reject)=>{
+        let file = false
+
+        if(file){
+            resolve("File Download !!!")
+        }else{
+            reject("File is not Downloaded !!!")
+        }
+    })
+}
+Download(file)
+.then((data)=>{
+    console.log(data)
+})
+.catch((error)=>{
+    console.log("Network Error : ",error)
+})
+.finally(()=>{
+    console.log("Operation completed")
+})
+
+//multiple promise-Promise chain we can use,it will run line by line only 
+
+Promise.resolve (5)
+.then(num => num * 2)
+.then(num => num + 5)
+.then(num => console.log(num))
+
+//promise all
+const user = Promise.resolve("A")
+const order = Promise.resolve("B")
+const history = Promise.resolve("C")
+
+Promise.all([user,order,history])
+.then(result=>{
+    cosole.log(result)
+})
+
+
+
+
+    function getUser(callback){
+        const mockData= {id:101, name:"Alex"}
+        callback(mockData);
+    }
+    function getOrder(userId,callback){
+        const mockOrder= {id:201, item:"phone" ,userId: userId}
+        callback(mockOrder);
+    }
+    function getPayments(orders,callback){
+        const mockPayments= {id:301, amount: 20000, oderId: orders.id, status: "success"}
+        callback(mockPayments);
+    }
+    function getShipment(payment,callback){
+        const mockShipment= {id:401, trackingNumnber:"TR1234" ,paymentId: payment.id}
+        callback(mockShipment);
+    }
+    
+
+        getUser(function(user){
+            getOrder(user.id,function(orders){
+                getPayments(orders,function(payment){
+                    getShipment(payment,function(shipment){
+                        console.log(shipment)
+                    })
+                    
+                    })
+                })
+            })
+
+
+
+//promise race
+
+const user = new Promise(resolve =>
+setTimeout(()) => resolve ("first"),6000)
+    )
+const order = new Promise(reject => 
+    setTimeout(() => reject("second"),2000)
+        )
+        Promise.race([user,order])
+        .then(console.log)
+        .catch((err))=>{
+            console.log(err)
+        })
+
+
+//promise allsettled 
+
+const user = new Promise(resolve =>
+setTimeout(()) => resolve ("first"),6000)
+    )
+const order = new Promise(reject => 
+    setTimeout(() => reject("second"),2000)
+        )
+const profile = new Promise(resolve =>
+    setTimeout(() => resolve("profile"),8000)
+)
+        Promise.race([user,order,profile ])
+        .then(console.log)
+        .catch((err))=>{
+            console.log(err)
+        })
+
+
+
+//allSettled
+const user = new Promise(resolve,reject) =>
+setTimeout(() => resolve ("user"),1000)
+    )
+const order = new Promise(resolve ,reject) => 
+    setTimeout(() => reject("Error"),2000)
+        )
+const profile = new Promise(resolve,reject) =>
+    setTimeout(() => resolve("profile"),2000)
+)
+        Promise.allSettled([user,order,profile ])
+        .then(console.log)
+
+
+
+//fetch API- is built in javascript tool used to send data across the network
+//to send data to server and receive dATA FROM Server
+//no page reload
+//HTTP METHOD
+----->  GET METHOD -  
+----->  POST METHOD
+----->. PUT METHOD - UPDATE AND REPLACE - WILL SEND EVERYTHING 
+------> PATCH METHOD - PARTIAL UPDATES - WILL SEND WAT IS NEEDED
+
+
+------> DELETE METHOD
+
+    </script>
+    
+</body>
+</html>

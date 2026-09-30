@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function wait(){
+            return new Promise(resolve,reject) =>{
+                setTimeout(() => {
+                reject("Finished!")
+                },2000)
+            })
+        }
+        async function test(){
+            try{
+                console.log("starting..")
+                const
+
+            }
+
+            console.log("starting...")
+            const result = await wait();
+            console.log(result);
+            concole.log("Done");
+        
+            fetch('https://jsonplaceholder.typicode.com/posts/1')
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+        }
+        
+
+
+        test ()
+
+        //chain asyn call order -sequencial
+        async function getUserData(){
+            const userResponse = await fetch ("")
+            const user = await userResponse.json()
+            const orderResponse = await fetch('link $ (user-id)')
+            const orders = await ordersResponse.json()
+            const orderResponse = await fetch('Link  $ (order-id)')
+            const order = 
+
+
+
+         // paralle   
+         const [ user,posts ,notification] = await Promise.all([ getUser(),getPosts(),getNotification()])
+
+         return { "user_data": user,"post_data": posts ,"notication_data": notification}
+        }
+         async function fetchData() {
+
+
+//with without promise
+    const user = await getUser();
+    
+        return {"user_data": user}
+    
+    const posts = await getPosts();
+        return {"post_data": posts}
+
+    const notification = await getNotification();
+
+    return {"notification_data": notification}
+}
+//with promiseAll
+async function fetchData() {
+
+    const [user, posts, notification] = await Promise.all([
+        getUser(),
+        getPosts(),
+        getNotification()
+    ]);
+
+    return {"user_data": user, "post_data": posts, "notification_data": notification};
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>

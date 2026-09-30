@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events Assignment</title>
+    <link rel="stylesheet" href="domeevents.css">
+</head>
+
+<body>
+
+<h1>JavaScript Events Assignment</h1>
+
+
+ TASK 1 - BLUR
+
+
+<section>
+    <h2>Task 1 - Registration Form</h2>
+
+    <input type="text" id="fullName" placeholder="Full Name">
+    <p id="nameMessage"></p>
+
+    <input type="text" id="email" placeholder="Email">
+    <p id="emailMessage"></p>
+
+    <input type="text" id="phone" placeholder="Phone Number">
+    <p id="phoneMessage"></p>
+
+    <p id="successMessage"></p>
+</section>
+
+
+
+     TASK 2 - Mouseover
+
+<section>
+    <h2>Task 2 - Product Cards</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <h3>Mobile</h3>
+            <p class="description">
+                A powerful smartphone with a great camera.
+            </p>
+            <p class="price">₹25,000</p>
+        </div>
+
+        <div class="product">
+            <h3>Laptop</h3>
+            <p class="description">
+                A fast laptop for work and study.
+            </p>
+            <p class="price">₹55,000</p>
+        </div>
+
+        <div class="product">
+            <h3>Headphones</h3>
+            <p class="description">
+                Wireless headphones with clear sound.
+            </p>
+            <p class="price">₹3,000</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+TASK 3 - GALLERY
+
+
+<section>
+    <h2>Task 3 - Image Gallery</h2>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/200/150?1">
+            <p class="image-title">Nature</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/200/150?2">
+            <p class="image-title">Mountain</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/200/150?3">
+            <p class="image-title">Beach</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/200/150?4">
+            <p class="image-title">Forest</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/200/150?5">
+            <p class="image-title">City</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/200/150?6">
+            <p class="image-title">River</p>
+        </div>
+
+    </div>
+</section>
+
+ TASK 4 - EVENT OBJECT
+
+
+<section>
+    <h2>Task 4 - Event Object</h2>
+
+    <div id="clickArea">
+        Click anywhere inside this box
+    </div>
+
+    <table border="1">
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+
+        <tr>
+            <td>Event Type</td>
+            <td id="eventType"></td>
+        </tr>
+
+        <tr>
+            <td>Mouse X</td>
+            <td id="mouseX"></td>
+        </tr>
+
+        <tr>
+            <td>Mouse Y</td>
+            <td id="mouseY"></td>
+        </tr>
+
+        <tr>
+            <td>Target</td>
+            <td id="target"></td>
+        </tr>
+
+        <tr>
+            <td>Current Target</td>
+            <td id="currentTarget"></td>
+        </tr>
+
+        <tr>
+            <td>Time Stamp</td>
+            <td id="timeStamp"></td>
+        </tr>
+    </table>
+</section>
+
+
+TASK 5 - MOUSE TRACKER
+
+
+<section>
+    <h2>Task 5 - Mouse Position Tracker</h2>
+
+    <div id="mouseBox">
+        Move your mouse here
+    </div>
+
+    <p>X Coordinate: <span id="xPosition">0</span></p>
+
+    <p>Y Coordinate: <span id="yPosition">0</span></p>
+
+    <p>Total Movements: <span id="movementCount">0</span></p>
+
+    <button id="resetMouse">Reset</button>
+</section>
+
+
+     TASK 6 & 7 - BUBBLING
+
+<section>
+    <h2>Task 6 & 7 - Event Bubbling</h2>
+
+    <div id="grandparent">
+        Grandparent
+
+        <div id="parent">
+            Parent
+
+            <div id="child">
+                Child
+
+                <button id="bubbleButton">
+                    Click Button
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <p id="bubbleResult"></p>
+</section>
+
+
+
+TASK 8 - TARGET VS CURRENTTARGET
+
+<section>
+    <h2>Task 8 - Target vs CurrentTarget</h2>
+
+    <div id="buttonContainer">
+
+        <button>Apple</button>
+        <button>Orange</button>
+        <button>Mango</button>
+        <button>Banana</button>
+        <button>Grapes</button>
+
+    </div>
+
+    <p id="targetResult"></p>
+</section>
+
+
+TASK 9 - MENU
+<section>
+    <h2>Task 9 - Mouseover Menu</h2>
+
+    <div class="menu">
+
+        <div class="menu-item">
+            Home
+            <div class="submenu">
+                Welcome
+            </div>
+        </div>
+
+        <div class="menu-item">
+            Products
+            <div class="submenu">
+                Mobile | Laptop
+            </div>
+        </div>
+
+        <div class="menu-item">
+            Services
+            <div class="submenu">
+                Design | Development
+            </div>
+        </div>
+
+        <div class="menu-item">
+            About
+            <div class="submenu">
+                Our Team
+            </div>
+        </div>
+
+        <div class="menu-item">
+            Contact
+            <div class="submenu">
+                Email | Phone
+            </div>
+        </div>
+
+    </div>
+</section>
+
+TASK 10 - EVENT DELEGATION
+
+
+<section>
+    <h2>Task 10 - Color Box Manager</h2>
+
+    <button id="addBox">Add Box</button>
+
+    <div id="boxContainer"></div>
+</section>
+
+
+<script src="domevents.js"></script>
+
+</body>
+</html>

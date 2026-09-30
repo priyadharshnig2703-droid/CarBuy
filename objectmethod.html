@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //object is a collection of data ,,saved as a key value pair
+
+        let student ={
+            name:"Alex",
+            age:27;
+        }
+      console.log(student);
+
+      //second typeof 
+
+      let person = new Object() // destructive method
+
+      person.name = " alex"
+      person.age = 28
+
+      console.log(student);
+      console.log(person);
+
+
+      //dot notation 
+      console.log(student.name);
+
+      //bracket notation 
+      let key = "age"
+      console.log(person["name"]);
+
+
+      //updater
+      let student ={
+            name:"Alex",
+            age:27;
+        }
+      student.age =29 //this is one way to update 
+      student["age"] =29 //this is another way to update
+
+      //delete
+      delete student
+
+
+      //function we can add
+      let student ={
+            name:"Alex",
+            age:27;
+            greet:function(){
+        }
+    }
+      console.log("Hello" +""+ this.name)
+      student.greet()
+
+    //obect method
+    //keys
+    //values
+
+    const keys =Object.key(student)
+    const values =Object.values(student)
+     const entries =Object.entries(student)/// to show html 
+    
+
+
+let student ={
+            name:"Alex",
+            age:27;
+        }
+    for(let key of Object.keys(students))
+    {
+        console.log("my name is"+ student[key].name + "and my age is"+ student[key].age);
+
+    }
+
+    // assign 
+    let student1 = {
+        name: "alex",
+    }
+
+    let student2 = {
+        age:27
+    }
+    Object.assign(student1.student2)
+    console.log(student1)
+
+    //empty 
+
+    let result = Object.assign({},student1,student2)
+    console.log(result)
+
+
+    //spread operator
+
+    let user = {
+        name: "Alex",
+    }
+
+    let details ={
+       age:2,
+       city:"chennai"
+    }
+
+    const person ={
+        ...user,
+    }
+
+    const person={
+        ...details
+        age:30
+    }
+
+    ?/*OBJECT BASICS
+────────────────────────
+{}                  → create object
+object.property     → access
+object["property"]  → bracket access
+=                   → update/add
+delete              → remove
+
+
+OBJECT METHODS
+────────────────────────
+Object.keys()       → keys
+Object.values()     → values
+Object.entries()    → key + value
+Object.fromEntries()→ entries → object
+Object.assign()     → copy/merge
+Object.hasOwn()     → check own property
+
+
+LOOPING
+────────────────────────
+for...in            → loop through keys
+
+
+DESTRUCTURING
+────────────────────────
+{ name }            → extract
+{ name: newName }   → rename
+{ age = 20 }        → default
+{ address: {city} } → nested
+
+
+COPYING
+────────────────────────
+{ ...obj }           → shallow copy
+Object.assign()      → shallow copy
+structuredClone()    → deep copy
+
+
+OBJECT METHODS
+────────────────────────
+method()             → function inside object
+this                  → current calling object*/
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+            
+    
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

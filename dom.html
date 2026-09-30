@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+    width:100px;
+    height:100px;
+    background:lightgray;
+    margin:10px;
+}
+
+.card{
+    margin:10px;
+}
+    </style>
+</head>
+<body>
+    <h2>Task 1</h2>
+
+<p class="p1">Apple</p>
+<p class="p1">Orange</p>
+<p class="p1">Mango</p>
+
+<p class="p2">Red</p>
+<p class="p2">Blue</p>
+<p class="p2">Green</p>
+
+<button onclick="copyText()">Copy</button>
+
+<hr>
+
+<h2>Task 2</h2>
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+<button onclick="changeBorder()">Click</button>
+
+<hr>
+
+<h2>Task 3</h2>
+
+<p class="item">A</p>
+<p class="item">B</p>
+<p class="item">C</p>
+<p class="item">D</p>
+<p class="item">E</p>
+
+<button onclick="change()">Change</button>
+
+<hr>
+
+<h2>Task 4</h2>
+
+<h2 class="title">HTML</h2>
+<h2 class="title">CSS</h2>
+<h2 class="title">JS</h2>
+<h2 class="title">React</h2>
+<h2 class="title">Node</h2>
+
+<button onclick="hide()">Hide</button>
+
+<hr>
+
+<h2>Task 5</h2>
+
+<p class="text">HTML</p>
+<p class="text">CSS</p>
+<p class="text">JavaScript</p>
+
+<button onclick="increase()">Increase</button>
+
+<hr>
+
+<h2>Task 6</h2>
+
+<img class="img" src="https://headsupfortails.com/cdn/shop/articles/Welcoming_a_Cat_to_a_New_Home_x630.jpg?v=1741258295" width="250">
+
+<button onclick="changeImage()">Change</button>
+
+<hr>
+
+<h2>Task 7</h2>
+
+<a class="link" href="https://google.com">Google</a>
+
+<button onclick="changeLink()">Change</button>
+
+<hr>
+
+<h2>Task 8</h2>
+
+<input class="name" value="Madhan">
+
+<button onclick="changeValue()">Change</button>
+
+<hr>
+
+<h2>Task 9</h2>
+
+<div class="box color"></div>
+<div class="box color"></div>
+<div class="box color"></div>
+<div class="box color"></div>
+<div class="box color"></div>
+<div class="box color"></div>
+
+<button onclick="colour()">Colour</button>
+
+<hr>
+
+<h2>Task 10</h2>
+
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JavaScript</div>
+
+<button onclick="design()">Design</button>
+
+<script>
+    function copyText() {
+
+    const p1 = document.querySelectorAll(".p1");
+    const p2 = document.querySelectorAll(".p2");
+
+    p1.forEach((item, index) => {
+        item.textContent = p2[index].textContent;
+    });
+
+}
+
+function changeBorder() {
+
+    const boxes = document.querySelectorAll(".box");
+
+    boxes.forEach((box) => {
+
+        box.style.border = "5px solid red";
+        box.style.borderRadius = "20px";
+
+    });
+
+}
+
+function change() {
+
+    const items = document.querySelectorAll(".item");
+
+    items.forEach((item, index) => {
+
+        if (index % 2 === 0) {
+            item.style.backgroundColor = "yellow";
+        } else {
+            item.style.backgroundColor = "pink";
+        }
+
+    });
+
+}
+
+function hide() {
+
+    const titles = document.querySelectorAll(".title");
+
+    titles.forEach((title, index) => {
+
+        if (index % 2 !== 0) {
+            title.style.display = "none";
+        }
+
+    });
+
+}
+
+function increase() {
+
+    const texts = document.querySelectorAll(".text");
+
+    texts.forEach((text) => {
+
+        text.style.fontSize = "40px";
+        text.style.fontWeight = "bold";
+
+    });
+
+}
+
+function changeImage() {
+
+    const image = document.querySelector(".img");
+
+    image.src = "https://hips.hearstapps.com/clv.h-cdn.co/assets/16/18/gettyimages-586890581.jpg?crop=0.668xw:1.00xh;0.219xw,0";
+
+}
+
+function changeLink() {
+
+    const link = document.querySelector(".link");
+
+    link.textContent = "YouTube";
+    link.href = "https://youtube.com";
+
+}
+
+function changeValue() {
+
+    const input = document.querySelector(".name");
+
+    input.value = "Full Stack Developer";
+
+}
+function colour() {
+
+    const boxes = document.querySelectorAll(".color");
+
+    const colours = ["red", "green", "blue"];
+
+    boxes.forEach((box, index) => {
+
+        box.style.backgroundColor = colours[index % 3];
+
+    });
+                                                                                                                                                                                                                                                                                queueMicrotaskq
+}
+
+function design() {
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+
+        card.style.width = "200px";
+        card.style.padding = "20px";
+        card.style.border = "2px solid black";
+        card.style.borderRadius = "15px";
+        card.style.backgroundColor = "lightblue";
+        card.style.color = "black";
+        card.style.textAlign = "center";
+        card.style.margin = "20px";
+
+    });
+
+}
+</script>
+
+    
+</body>
+</html>

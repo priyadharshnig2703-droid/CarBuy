@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label>Student Name</label>
+<input type="text" id="name" onkeyup="showName()">
+<p id="nameOutput"></p>
+<p id="nameCount"></p>
+
+<label>Email</label>
+<input type="email" id="email" onkeyup="showEmail()">
+<p id="emailOutput"></p>
+
+<label>Age</label>
+<input type="number" id="age" onkeyup="showAge()">
+<p id="ageOutput"></p>
+
+
+<input type="radio" name="gender" value="Male" onchange="showGender()">Male
+
+<input type="radio" name="gender" value="Female" onchange="showGender()">Female
+
+<input type="radio" name="gender" value="Other" onchange="showGender()">Other
+
+<p id="genderOutput"></p>
+
+<select id="course" onchange="showCourse()">
+
+<option value="">Select</option>
+
+<option>Full Stack Development</option>
+
+<option>UI UX</option>
+
+<option>Python</option>
+
+</select>
+
+<p id="courseOutput"></p>
+
+<input type="checkbox" value="HTML" onchange="showSkills()">HTML
+
+<input type="checkbox" value="CSS" onchange="showSkills()">CSS
+
+<input type="checkbox" value="JavaScript" onchange="showSkills()">JavaScript
+
+<input type="checkbox" value="React" onchange="showSkills()">React
+
+<p id="skillsOutput"></p>
+
+<input type="date" id="dob" onchange="showDob()">
+
+<p id="dobOutput"></p>
+
+<input type="file" id="file" onchange="showFile()">
+
+<p id="fileOutput"></p>
+
+<textarea id="about" onkeyup="showAbout()"></textarea>
+
+<p id="charCount"></p>
+
+<p id="wordCount"></p>
+
+
+<input type="checkbox" id="terms" onchange="showTerms()">
+
+<p id="termsOutput"></p>
+
+<button onclick="submitForm(event)">Submit</button>
+
+<button type="reset" onclick="resetData()">Reset</button>
+
+
+<script>form.js</script>
+</body>
+</html>

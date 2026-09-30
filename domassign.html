@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text1">
+        <h3>Text1</h3>
+        <p>Welcome to html</p>
+        <p>Welcome to css</p>
+        <p>welcome to javascript</p>
+        <p>welcome to DOM</p>
+        </div>
+
+        <div id="text2">
+        <h3>Text2</h3>
+        <p>Welcome to api</p>
+        <p>Welcome to react</p>
+        <p>welcome to mongo</p>
+        <p>welcome to DOM</p>
+        </div>
+
+        <br>
+
+        <button onclick="textcolor1()">Change colour 1</button>
+        <button onclick="textcolor2()">Change colour 2</button>
+        <button onclick="text1()">Change text1 to text2</button>
+        <button onclick="text2()">Change text2 to text1</button>
+
+
+       <script>
+        function textcolor1()
+        {
+            
+
+        const text1 = document.getElementById("text1")
+        text1.style.color = "red"
+    }
+    function textcolor2()
+        {
+            
+
+        const text2 = document.getElementById("text2")
+        text2.style.color = "blue"
+    }
+    function text1()
+    {
+        let text1= document.querySelectorAll("#text1 p")
+        let text2= document.querySelectorAll("#text2 p")
+        text1.forEach((element, index) => {
+        element.textContent = text2[index].textContent;
+    });
+
+
+    }
+        function text2()
+    {
+        let text1= document.querySelectorAll("#text1 p")
+        let text2= document.querySelectorAll("#text2 p")
+        text2.forEach((element, index) => {
+        element.textContent = text1[index].textContent;
+
+
+
+        })   
+    }
+
+ </script>
+    
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Task 1
+   /* function delay(ms) {
+    return new Promise(resolve => {
+    setTimeout(resolve);
+    });
+}
+
+async function getUser() {
+    await delay(2000);
+    return {
+        id: 101,
+        name: "Madhan"
+    };
+
+}
+
+async function getOrder() {
+    await delay(2000);
+    return {
+        id: 501,
+        product: "Laptop"
+    };
+}
+
+async function getProfile() {
+    await delay(2000);
+    return {
+        age: 25,
+        city: "Chennai"
+    };
+
+}
+
+async function test() {
+    const user = await getUser();
+    const order = await getOrder();
+    const profile = await getProfile();
+    console.log("User:", user);
+    console.log("Order:", order);
+    console.log("Profile:", profile);
+}
+test();*/
+//taask 2
+/*function delay(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve);
+    },ms);
+}
+async function getUser() {
+  await delay(2000);
+    return {
+        id: 101,
+        name: "Madhan"
+    };
+}
+async function getOrder() {
+    await delay(2000);
+    return {
+        id: 501,
+        product: "Laptop"
+    };
+}
+async function getProfile() {
+    await delay(2000);
+    throw new Error("Failed to get profile");
+}
+async function getData() {
+    try {
+        console.log("Getting user...");
+        const user = await getUser();
+        console.log("User:", user);
+        console.log("Getting order...");
+        const order = await getOrder();
+        console.log("Order:", order);
+        console.log("Getting profile...");
+        const profile = await getProfile();
+        console.log("Profile:", profile);
+    }
+    catch(error) {
+        console.log("Error:", error.message);
+
+    }
+}
+getData();*/
+
+
+//Task 3
+function delay(ms) {
+    return new Promise(resolve => {
+      setTimeout(resolve);
+    },ms);
+}
+
+async function getUser() {
+    await delay(2000);
+    return {
+        id: 101,
+        name: "Madhan"
+    };
+}
+
+async function getOrder() {
+ await delay(2000);
+    return {
+        id: 501,
+        product: "Laptop"
+    };
+}
+
+async function getProfile() {
+    await delay(2000);
+    return {
+        age: 25,
+        city: "Chennai"
+    };
+}
+
+async function getData() {
+    try {
+        console.log("Starting requests...");
+        let result = await Promise.all([getUser(),getOrder(),getProfile()
+
+        ]);
+
+        const userPromise = getUser();
+        const orderPromise = getOrder();
+        const profilePromise = getProfile();
+        const user = await userPromise;
+        const order = await orderPromise;
+        const profile = await profilePromise;
+        console.log("User:", user);
+        console.log("Order:", order);
+        console.log("Profile:", profile);
+        console.log("All data received successfully.");
+    }
+    catch(error) {
+        console.log("Error:", error.message);
+    }
+}
+getData();
+    </script>
+</body>
+</html>

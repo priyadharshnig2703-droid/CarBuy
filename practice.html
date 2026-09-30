@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //print numbers
+        //10
+        //20
+        //30
+        //40
+        //50
+
+        let numbers = [10, 20, 30, 40, 50];  //create array 
+       for(let i=0 ; i <= number.length ;i++)
+         {
+            console.log(number[i]);
+         }
+        
+
+         //Print only even numbers
+         /*Print only even numbers
+let numbers = [10, 15, 22, 31, 40, 55];
+
+Use a for loop + if.
+
+Expected:
+
+10
+22
+40*/
+         
+
+let numbers = [10, 15, 22, 31, 40, 55];
+         for( i=0 ; i<= number.length ; i++ )
+         {
+            if(number[i] % 2 == 0 ) // even number
+            // odd number -  if(number[i] % 2 != 0)
+         {
+            console.log(number[i]);
+        
+         }
+        }
+
+
+/*Count numbers greater than 20
+let numbers = [10, 25, 5, 40, 30, 15];
+Expected:
+3*/
+let numbers = [10,25,5,40,30,15];
+let count = 0;
+for ( i = 0; i <= numbers.length ; i++)
+{
+    if(number[i] > 20)
+{
+    console.log(number[i]);
+
+    count ++;
+
+}
+
+}
+
+/*Find the Second Largest Number
+
+Write a function to find the second largest unique number in an array.
+
+Input:
+
+[10, 45, 20, 45, 30, 50, 40]
+Output:
+
+45
+Condition: Do not simply sort the array and take the second element.*/
+let input = [10, 45, 20, 45, 30, 50, 40];
+let largest = input[0];
+let secondlargest = input[0];
+
+ function second()
+
+{
+    for(i = 0 ; i <= input.length ; i++) 
+
+    { 
+        if (number[i] > largest);
+
+        {
+            secondlargest =  largest;
+            largest = input[i];
+        }
+        
+        else if(input[i] > secondLargest && input[i] != largest)
+
+        {
+
+    secondLargest = input[i];
+
+}
+    }
+
+return secondLargest();
+
+    }
+
+    console.log(second());
+    
+
+
+
+// palindrome 
+// fibinocess
+// factorial 
+// even odd
+// prime, non - prime.
+// if statement
+//print number
+
+let numbers = [10,20,]
+
+
+
+
+</script>
+</body>
+</html>

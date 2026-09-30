@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promise Rejection and Error Handling</h1>
+    <script>
+        //Task 1
+        /*Task 1: Basic Promise
+
+Goal
+
+Create a Promise that resolves after 2 seconds.
+
+Requirements
+
+Create a new Promise.
+Wait for 2 seconds using setTimeout().
+Resolve with "Download Complete".
+Print the result using .then().
+Expected Output
+
+Downloading... (wait 2 seconds) Download Complete*/ 
+function newPromise() 
+{
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Download Complete");
+        }, 2000);
+    });
+}
+newPromise()
+.then((result) => {
+    console.log(result);
+});
+
+/*Task 2: Promise Reject
+
+Goal
+
+Handle success and failure.
+
+Requirements
+
+Create a Promise.
+Generate a random number.
+If the number is greater than 5, resolve with:
+Login Successful
+Otherwise reject with:
+
+Invalid Credentials
+Use:
+
+.then()
+.catch()
+.finally()*/
+
+function newPromise() {
+    return new Promise((resolve, reject) => {
+        let random = Math.floor(Math.random() * 10) + 1;
+        console.log(random);
+        if(random > 5) {
+            resolve("Login Successful");
+        }
+        else {
+            reject("Invalid Credentials");
+        }
+    });
+}
+newPromise()
+.then((result) => {
+    console.log(result);
+})
+.catch((error) => {
+    console.log(error);
+})
+.finally(() => {
+    console.log("Login process completed");
+});
+    
+
+/* Task 3: Delay Function
+
+Create a reusable function.
+
+delay(ms)
+Requirements
+
+delay(3000)
+should resolve after 3 seconds.
+
+Expected
+
+Start (wait 3 seconds) Finished*/
+
+function delay(ms){
+    return new Promise((resolve)=>
+{
+setTimeout(()=>{
+    resolve("Finished");
+
+} ,ms);
+})
+}
+console.log("Start");
+delay(3000)
+.then ((result)=>{
+    console.log(result);
+});
+
+
+/*Task 4: Promise Chaining (Easy)
+
+Create three functions.
+
+getUser()
+↓
+
+getOrders(user)
+↓
+
+getOrderDetails(order)
+Each function returns a Promise.
+
+Chain them.
+
+Expected Output
+
+Getting User... User Found Getting Orders... Order Found Getting Details... Order Delivered*/
+
+function getUser(){
+    return new Promise((resolve)=>{
+        console.log("Getting User...");
+        resolve("User Found");
+    });
+}
+function getOrder(user){
+    return new Promise((resolve) =>{
+        console.log("Getting Orders");
+        resolve("Order Found");
+    })
+}
+function getOrderDetails(order){
+    return new Promise((resolve ) =>{
+        console.log("Getting Details");
+        resolve("Order Delivered");
+    })
+}
+getUser()
+    .then((user) => {
+        return getOrders(user);
+    })
+    .then((order) => {
+        return getOrderDetails(order);
+    })
+    .then((result) => {
+        console.log(result);
+    });
+
+
+/*ask 5: Promise Chaining (Student Example)
+
+Create Promises for
+
+Enroll Student ↓ Pay Fees ↓ Attend Class ↓ Take Exam ↓ Get Certificate
+Each step should wait one second.
+
+Expected
+
+Student Enrolled Fees Paid Class Completed Exam Passed Certificate Generated
+
+*/
+function enrollStudent() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Student Enrolled");
+        }, 1000);
+    });
+}
+function payFees() {
+    return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Fees Paid");
+                }, 1000);
+            });
+        }
+function attendClass() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Class Completed");
+        }, 1000);
+    });
+}
+function takeExam() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Exam Passed");
+          }, 1000);
+  });
+
+}
+function getCertificate() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+         resolve("Certificate Generated");
+        }, 1000);
+    });
+
+/* Task 6: Promise.all()
+
+Create three API simulation functions.
+
+getUsers()
+getProducts()
+getOrders()
+Each resolves after different times.
+
+Example
+
+Users -> 2 sec Products -> 1 sec Orders -> 3 sec
+Use
+
+Promise.all([...])
+Expected
+
+Loading... Users Loaded Products Loaded Orders Loaded All Data Loaded
+*/
+
+function getUsers() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Users Loaded");
+        }, 2000);
+    });
+
+}
+function getProducts() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Products Loaded");
+        }, 1000);
+    });
+}
+function getOrders() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Orders Loaded");
+        }, 3000);
+     });
+}
+console.log("Loading...");
+Promise.all([
+    getUsers(),
+    getProducts(),
+    getOrders()
+])
+.then((result) => {
+    console.log(result);
+    console.log("All Data Loaded");
+});
+
+</script>
+</body>
+</html>

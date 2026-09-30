@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    width: 350px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-bottom: 15px;
+}
+
+.show-password label {
+    margin: 0;
+}
+
+.show-password input {
+    margin: 0;
+}
+
+button {
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #333;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+}

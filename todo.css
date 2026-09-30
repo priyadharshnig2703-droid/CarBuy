@@ -1,0 +1,59 @@
+body{
+
+font-family:Arial;
+
+background:#f5f5f5;
+
+display:flex;
+
+justify-content:center;
+
+padding:40px;
+
+}
+
+.container{
+
+width:700px;
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+box-shadow:0 0 10px gray;
+
+}
+
+.todo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px;
+
+margin:10px 0;
+
+border:1px solid gray;
+
+border-radius:8px;
+
+}
+
+.todo button{
+
+padding:5px 10px;
+
+}
+
+.completed{
+
+text-decoration:line-through;
+
+color:gray;
+
+}

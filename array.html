@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr.push()
+        arr.unshift()
+        arr.pop()
+        arr.shift()
+       // arr.splice( start ,deleteCount,item1,item2 ,...)
+       let arr = []
+
+       let arr1 = ["apple","orange"]
+       let arr2 = ["banana","mango"]
+
+       console.log(result);
+
+       let arr1= [1,2,3,4,5,6]
+
+       let result = arr.find((number)=> { return number>10
+       })
+       
+
+
+      find sum reduce ,map, includes,foreach,sort
+       //array with object
+
+       let arr =[ 
+        {id:1,name: "Madhan"},
+        {id:2,name:"Alex"},
+        {id:3,name:"Unknown"}
+    ]
+    let result  = arr.find((user)=>{ return user.id === 2})
+       console.log(result);
+
+       //to duplicate  the array use map
+       let arr= [1,2,3,4];
+       let result = arr.map((n)=>{
+        return n*2 
+       })
+
+       //reduce()
+       let arr = [1,2,3,4,5,6,7,8,9]
+       
+       let result = arr.reduce((acc,current)) =>{
+        if( current > acc.largest)
+       {
+        acc.secondLargest = acc.largest;
+        acc.largest = current;
+       }
+       elseif(current > acc.secongLargest)
+       {
+
+       }
+       }largest,secondLargest
+
+       //for each()  to print 
+       arr.forEach(i) =>  
+
+       // sort()
+       console.log(arr.sort();
+       console.log(arr.sort(a,b)=> b-a));-----> to reverse 
+       console.log(arr);
+
+       //nested array
+       let arr = [1,2,[3,4],5,[6],7]
+       console.log(arr.flat(infinity));
+
+       //every ()
+       let arr = [10,20,30,40];
+       let result = arr.every9number => number >5)
+       console.log(result);
+
+
+       //copy array
+       let arr= [10,2,3,4];
+       let copy = [...arr,3,5,6,7]
+       console.log(copy);
+
+       //destructing
+       let arr = ["apple","orange","banana"];
+       let [one,two, three] = arr 
+        console.log(one);
+
+        //use all methods
+        filter()
+        forEach()
+        destruct  
+        
+        
+    //forEach
+        let numbers = [10, 25, 40, 55, 70, 85];
+        numbers.forEach((number)=> {
+        console.log(number);
+        });
+
+
+    //filter
+        let numbers = [10, 25, 40, 55, 70, 85];
+        let result = numbers.filter((number)=> {
+        return number > 40;
+        });
+        console.log(result);
+
+       
+
+    //reduce()
+        let numbers = [10, 25, 40, 55, 70, 85];
+        let total = numbers.reduce((sum, number)=> {
+        return sum + number;
+        }, 0);
+        console.log(total);
+
+
+    //sort()
+        let numbers = [10, 25, 40, 55, 70, 85];
+        console.log(numbers.sort(a,b) => b-a);
+        console.log(numbers);
+          rs.every(number => number >5)
+/"[j]"       console.log(result);
+
+
+    //find
+         let numbers = [10, 25, 40, 55, 70, 85];
+         let result = numbers.find((number)=> { return number>10
+       })
+
+
+    //map
+       let numbers = [10, 25, 40, 55, 70, 85];
+       let result = numbers.map((n)=>{
+        return n*2 
+       })  
+    </script>
+
+    
+</body>
+</html>
+//forEach() → executes something for every element
+map()     → transforms every element into a new array
+filter()  → selects elements that satisfy a condition
+find()    → returns the first matching element
+some()    → checks if at least one element matches
+every()   → checks if all elements match
+reduce()  → combines elements into one value

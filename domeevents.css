@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+/* TASK 1 */
+
+input {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+p {
+    margin: 8px 0;
+}
+
+#successMessage {
+    color: green;
+}
+
+
+/* TASK 2 */
+
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 200px;
+    padding: 20px;
+    background: lightgray;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.description,
+.price {
+    display: none;
+}
+
+
+/* TASK 3 */
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.image-title {
+    display: none;
+}
+
+
+/* TASK 4 */
+
+#clickArea {
+    height: 250px;
+    background: purple;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/* TASK 5 */
+
+#mouseBox {
+    height: 250px;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* TASK 6 */
+
+#grandparent {
+    background: #ddd;
+    padding: 30px;
+}
+
+#parent {
+    background: #aaa;
+    padding: 30px;
+}
+
+#child {
+    background: #777;
+    color: white;
+    padding: 30px;
+}
+
+
+/* TASK 8 */
+
+#buttonContainer {
+    padding: 20px;
+    background: lightgray;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+/* TASK 9 */
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    background: black;
+    color: white;
+    padding: 15px;
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: gray;
+    padding: 15px;
+    width: 150px;
+}
+
+
+/* TASK 10 */
+
+#boxContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.color-box {
+    width: 180px;
+    padding: 20px;
+    background: lightgray;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.color-box button {
+    margin: 5px;
+}

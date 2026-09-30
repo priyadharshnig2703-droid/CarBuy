@@ -1,0 +1,11 @@
+const mob = {
+    brand: "Samsung",
+    model: "Galaxy S24",
+    color: "Red",
+    price: 75000,
+
+}
+const json = JSON.stringify(mob)
+
+console.log(json)
+console.log(mob)
